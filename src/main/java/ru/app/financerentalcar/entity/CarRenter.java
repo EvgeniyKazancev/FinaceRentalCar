@@ -20,7 +20,7 @@ public class CarRenter {
     @Column(name = "lastName")
     private String lastName;
 
-    @Column(name = "phone_number")
+    @Column(name = "phoneNumber")
     private Long phoneNumber;
 
     @Column(name = "email")

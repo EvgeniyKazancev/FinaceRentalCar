@@ -13,8 +13,8 @@ import java.util.UUID;
 public class Owner {
 
     @Id
-    @Column(name = "passport_id")
-    private Long passport_id;
+    @Column(name = "passportId")
+    private Long passportId;
 
     @Column(name = "firstName")
     private String firstName;
@@ -22,7 +22,7 @@ public class Owner {
     @Column(name = "lastName")
     private String lastName;
 
-    @Column(name = "phone_number")
+    @Column(name = "phoneNumber")
     private Long phoneNumber;
 
     @Column(name = "email")

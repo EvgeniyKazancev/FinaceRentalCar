@@ -33,6 +33,9 @@ public class Car {
     @Column(name = "color")
     private Color color;
 
+    @Column(name = "sticker")
+    private boolean sticker;
+
     @Getter(AccessLevel.NONE)
     @Setter(AccessLevel.NONE)
     @OneToOne(optional = false,orphanRemoval = true)
