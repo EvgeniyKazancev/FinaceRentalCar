@@ -1,13 +1,11 @@
 package ru.app.financerentalcar.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AccessLevel;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import ru.app.financerentalcar.enums.Color;
-
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -27,6 +25,7 @@ public class Car {
     private String model;
 
     @Column(name = "year_release")
+    @Size(min = 1900, max = 2023)
     private int yearRelease;
 
     @Enumerated(EnumType.STRING)
@@ -38,7 +37,12 @@ public class Car {
 
     @Getter(AccessLevel.NONE)
     @Setter(AccessLevel.NONE)
-    @OneToOne(optional = false,orphanRemoval = true)
-    @JoinColumn(name = "number_pts",nullable = false)
+    @OneToOne(optional = false, orphanRemoval = true)
+    @JoinColumn(name = "number_pts", nullable = false)
     private PTS pts;
+
+    @ManyToOne
+    @JoinColumn(name = "cost_id")
+    private CostPerDay costPerDay;
+
 }
