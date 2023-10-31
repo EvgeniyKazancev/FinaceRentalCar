@@ -25,7 +25,7 @@ public class Car {
     private String model;
 
     @Column(name = "year_release")
-    @Size(min = 1900, max = 2023)
+    @Size(min = 2010, max = 2023)
     private int yearRelease;
 
     @Enumerated(EnumType.STRING)
