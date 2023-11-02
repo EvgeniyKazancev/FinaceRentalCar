@@ -23,8 +23,7 @@ public class OwnerServices implements PersonCommonInt {
 
     @Override
     public List<Object> getAllPerson() {
-        List<Object> ownerList = new ArrayList<>();
-        return ownerList = Collections.singletonList(ownerRepository.findAll());
+        return Collections.singletonList(ownerRepository.findAll());
 
     }
 

@@ -16,7 +16,7 @@ import lombok.Setter;
 public class CarRenter {
     @Id
     @Column(name = "passportRenter_id")
-    private Long passportRenter_id;
+    private Long passportRenterId;
 
     @Column(name = "firstName")
     @NotEmpty(message = "Имя не может быть пустым")

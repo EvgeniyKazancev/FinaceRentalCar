@@ -8,7 +8,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class CarRenterDTO {
-    private Long passport_id;
+    private Long passportRenterId;
     private String firstName;
     private String lastName;
     private Long phoneNumber;

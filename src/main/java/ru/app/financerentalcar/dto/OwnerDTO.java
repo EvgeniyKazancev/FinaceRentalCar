@@ -8,4 +8,9 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 public class OwnerDTO {
+    private Long passportId;
+    private String firstName;
+    private String lastName;
+    private Long phoneNumber;
+    private String email;
 }

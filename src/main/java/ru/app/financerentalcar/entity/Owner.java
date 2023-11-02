@@ -19,19 +19,15 @@ public class Owner {
 
     @Id
     @Column(name = "passportId")
-
     private Long passportId;
 
     @Column(name = "first_name")
-
     private String firstName;
 
     @Column(name = "last_name")
-
     private String lastName;
 
     @Column(name = "phone_number")
-
     private Long phoneNumber;
 
     @Column(name = "email")

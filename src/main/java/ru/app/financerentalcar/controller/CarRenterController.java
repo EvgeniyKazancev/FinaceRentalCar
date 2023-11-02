@@ -1,6 +1,7 @@
 package ru.app.financerentalcar.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import ru.app.financerentalcar.entity.CarRenter;
 import ru.app.financerentalcar.response.ResponseMessage;
@@ -29,8 +30,9 @@ public class CarRenterController {
     }
 
     @PutMapping("/addRent")
-    public ResponseMessage newRenter(@RequestParam Long passportId, @RequestParam String firstName, @RequestParam String lastName, @RequestParam Long phoneNumber, @RequestParam String email){
-        return carRenterServices.addPerson(passportId,firstName,lastName,phoneNumber,email);
+
+    public ResponseMessage newRenter(@RequestParam Long passportRenterId, @RequestParam String firstName, @RequestParam String lastName, @RequestParam Long phoneNumber, @RequestParam String email){
+        return carRenterServices.addPerson(passportRenterId,firstName,lastName,phoneNumber,email);
     }
     @DeleteMapping("/delRent")
     public ResponseMessage deleteRenter(@RequestParam Long passportId){
