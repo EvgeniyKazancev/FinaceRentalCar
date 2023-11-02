@@ -5,10 +5,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import ru.app.financerentalcar.entity.Owner;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
 public interface OwnerRepository extends JpaRepository<Owner,Long> {
-  Optional<Owner> findByPassportId(Long passportId) ;
+    @Override
+    List<Owner> findAll();
+
+    Optional<Owner> findByPassportId(Long passportId) ;
 
 }

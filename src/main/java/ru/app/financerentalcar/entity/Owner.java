@@ -19,19 +19,19 @@ public class Owner {
 
     @Id
     @Column(name = "passportId")
-    @NotEmpty(message = "Паспорт не может быть пуст")
+
     private Long passportId;
 
     @Column(name = "first_name")
-    @NotEmpty(message = "Имя не может быть пустым")
+
     private String firstName;
 
     @Column(name = "last_name")
-    @NotEmpty(message = "Фамилия не может быть пустой")
+
     private String lastName;
 
     @Column(name = "phone_number")
-    @Size(min = 3, max = 12)
+
     private Long phoneNumber;
 
     @Column(name = "email")
